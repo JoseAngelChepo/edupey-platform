@@ -16,5 +16,5 @@ export const campaignApi = {
   unfollow: (id: string) => ApiServices.delete(`/campaigns/${id}/follow`),
   create: (data: NewCampaign) => ApiServices.post<Campaign>('/campaigns', data).then(r => r.data),
 }
-export const money = (minor: number) => new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 0 }).format(minor / 100)
+export const money = (minor: number) => new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(minor / 100)
 export const categoryNames = { materials: 'Útiles y materiales', scholarship: 'Becas y talento', technology: 'Tecnología educativa' }

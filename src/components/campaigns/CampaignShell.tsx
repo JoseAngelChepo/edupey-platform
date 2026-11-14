@@ -14,6 +14,6 @@ export default function CampaignShell({ children }: { children: React.ReactNode 
       {isLoggedIn ? <button className={styles.quiet} onClick={async () => { await services.logout(); router.push('/campanas') }}>Cerrar sesión ↗</button> : <Link className={styles.primary} href="/sign-in">Entrar ↗</Link>}
     </header>
     <main className={styles.main}>{children}</main>
-    <footer className={styles.footer}><strong>Pequeñas aportaciones. Grandes posibilidades.</strong><span>EduPey · Crowdfunding por la educación</span><Link href="/">Conoce el proyecto ↗</Link></footer>
+    <footer className={styles.footer}><strong>Pequeñas aportaciones. Grandes posibilidades.</strong><span>EduPey · Crowdfunding por la educación</span><Link href="/proyecto">Conoce el proyecto ↗</Link></footer>
   </div>
 }

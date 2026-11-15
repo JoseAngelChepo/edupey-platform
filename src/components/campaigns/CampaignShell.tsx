@@ -52,7 +52,6 @@ export default function CampaignShell({
       <footer className={styles.footer}>
         <strong>Financiamos el aprendizaje.</strong>
         <span>EduPey · Donaciones para la educación</span>
-        <Link href="/proyecto">Conoce el proyecto</Link>
       </footer>
     </div>
   )

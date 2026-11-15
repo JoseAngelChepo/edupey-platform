@@ -35,11 +35,11 @@ export const landingContent = {
     "dashboardLabel": "Mi seguimiento"
   },
   "hero": {
-    "eyebrow": "Crowdfunding por la educación",
-    "title": "Su próxima oportunidad empieza contigo.",
-    "lede": "Una comunidad que impulsa el aprendizaje y abre camino al talento de los niños. Conoce las metas educativas y acompaña su desarrollo.",
+    "eyebrow": "Donaciones para la educación",
+    "title": "Financiamos el aprendizaje",
+    "lede": "Escanea el QR de una campaña y aporta a metas educativas concretas. Son donaciones: sin rendimientos financieros.",
     "primaryCta": {
-      "label": "Explorar campañas",
+      "label": "Ver campañas",
       "href": "/campanas"
     },
     "secondaryCta": {

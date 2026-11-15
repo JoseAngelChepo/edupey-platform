@@ -33,8 +33,12 @@ export default function LandingSection({
         }
         .section--hero {
           position: relative;
-          padding-top: 5rem;
-          padding-bottom: 6rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: calc(100svh - 3.75rem);
+          padding-top: 3.5rem;
+          padding-bottom: 3.5rem;
           overflow: hidden;
           text-align: center;
           background: var(--app-bg);
@@ -48,8 +52,8 @@ export default function LandingSection({
             padding: 6.5rem 0;
           }
           .section--hero {
-            padding-top: 7rem;
-            padding-bottom: 8rem;
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
           }
         }
       `}</style>

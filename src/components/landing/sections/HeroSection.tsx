@@ -52,15 +52,18 @@ export default function HeroSection() {
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
           text-align: center;
+          width: 100%;
+          padding-block: 1rem;
         }
         .badge {
           display: inline-flex;
           align-items: center;
           gap: 0.5rem;
-          margin: 0 0 1.5rem;
-          padding: 0.375rem 0.75rem 0.375rem 0.625rem;
-          font-size: 0.8125rem;
+          margin: 0 0 1.75rem;
+          padding: 0.4375rem 0.875rem 0.4375rem 0.75rem;
+          font-size: 0.875rem;
           font-weight: 500;
           color: var(--app-text);
           background: var(--app-surface);
@@ -69,26 +72,26 @@ export default function HeroSection() {
           box-shadow: var(--app-shadow-sm);
         }
         .badge-dot {
-          width: 0.4375rem;
-          height: 0.4375rem;
+          width: 0.5rem;
+          height: 0.5rem;
           border-radius: 50%;
           background: var(--app-success);
-          box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.18);
+          box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.18);
         }
         .title {
-          margin: 0 0 1.25rem;
-          max-width: 22ch;
-          font-size: 2.75rem;
-          font-weight: 600;
-          letter-spacing: -0.035em;
-          line-height: 1.02;
+          margin: 0 0 1.5rem;
+          max-width: 14ch;
+          font-size: clamp(2.75rem, 8.5vw, 3.75rem);
+          font-weight: 700;
+          letter-spacing: -0.04em;
+          line-height: 0.98;
           color: var(--app-text);
           text-wrap: balance;
         }
         .lede {
-          margin: 0 0 2rem;
-          max-width: 36rem;
-          font-size: 1.0625rem;
+          margin: 0 0 2.5rem;
+          max-width: 38rem;
+          font-size: 1.125rem;
           line-height: 1.55;
           color: var(--app-text-muted);
           text-wrap: pretty;
@@ -97,20 +100,28 @@ export default function HeroSection() {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 0.625rem;
+          gap: 0.875rem;
         }
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
           .title {
-            font-size: 4.5rem;
-            max-width: 18ch;
+            font-size: clamp(4rem, 7vw, 5.25rem);
+            max-width: 16ch;
           }
           .lede {
-            font-size: 1.125rem;
+            font-size: 1.25rem;
+            max-width: 40rem;
           }
         }
         @media (min-width: 1280px) {
           .title {
-            font-size: 5rem;
+            font-size: 5.75rem;
+            max-width: 15ch;
+          }
+          .lede {
+            font-size: 1.3125rem;
+          }
+          .actions {
+            gap: 1rem;
           }
         }
       `}</style>

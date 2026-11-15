@@ -41,30 +41,36 @@ export default function CampaignCatalog() {
             edu<span>pey</span>
           </p>
           <h1 id="home-hero-title">Financiamos el aprendizaje</h1>
-          <p>
+          <p className={styles.homeLede}>
             Donaciones colectivas para metas educativas concretas. Escanea el QR
             de una campaña lista para recibir apoyo.
           </p>
-          {active ? (
-            <a
-              className={styles.primary}
-              href={PEY_PAYMENT_QR_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Aportar con CoDi
+          <div className={styles.homeActions}>
+            {active ? (
+              <a
+                className={styles.primary}
+                href={PEY_PAYMENT_QR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Aportar con CoDi
+              </a>
+            ) : error ? (
+              <button className={styles.primary} onClick={() => void load()}>
+                Reintentar
+              </button>
+            ) : (
+              <a className={styles.primary} href="#campanas-qr">
+                {loading ? "Ver campañas" : "Explorar campañas"}
+              </a>
+            )}
+            <a className={styles.secondary} href="/sign-up">
+              Crear cuenta
             </a>
-          ) : (
-            !loading &&
-            !error && (
-              <span className={styles.caption}>
-                Pronto aparecerán las primeras campañas.
-              </span>
-            )
-          )}
+          </div>
         </div>
 
-        <div className={styles.homeAside}>
+        <div className={styles.homeAside} id="campanas-qr">
           {loading ? (
             <p role="status">Cargando campañas…</p>
           ) : error ? (

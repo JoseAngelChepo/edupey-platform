@@ -5,7 +5,10 @@ export const NEXT_PUBLIC_APP_URL =
 
 export const NEXT_PUBLIC_API_URL =
   process.env.NEXT_PUBLIC_API_URL ||
-  (isProduction ? "https://[SETUP-REQUIRED]/api/v1" : "http://localhost:3001/api/v1")
+  (isProduction
+    ? "https://[SETUP-REQUIRED]/api/v1"
+    : // Same-origin via next.config.ts rewrite → first-party auth cookies
+      "/api/v1")
 
 /** `username:password` for unauthenticated requests when your API requires HTTP Basic. */
 export const NEXT_PUBLIC_API_BASIC_AUTH =
